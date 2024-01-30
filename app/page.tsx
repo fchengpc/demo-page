@@ -6,7 +6,6 @@ import { components } from '@/slices';
 
 export default async function Page() {
 	const client = createClient();
-	console.log('--------------------------------');
 	const page = await client.getSingle('landing_page');
 
 	return <SliceZone slices={page.data.slices} components={components} />;
