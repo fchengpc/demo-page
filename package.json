@@ -11,7 +11,8 @@
         "lint": "lint-staged",
         "lint:all": "eslint --max-warnings=0 --ext js,jsx,ts,tsx packages/ playground/",
         "lint:fix": "eslint --max-warnings=0 --fix",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "slicemachine": "start-slicemachine"
     },
     "husky": {
         "hooks": {
@@ -30,6 +31,9 @@
         "url": "git+https://github.com/fchengpc/demo-page.git"
     },
     "dependencies": {
+        "@prismicio/client": "^7.3.1",
+        "@prismicio/next": "^1.5.0",
+        "@prismicio/react": "^2.7.3",
         "eslint-config-next": "^14.1.0",
         "lodash": "^4.17.21",
         "next": "^14.1.0",
@@ -39,6 +43,7 @@
     "devDependencies": {
         "@babel/core": "^7.17.2",
         "@babel/eslint-parser": "^7.17.0",
+        "@slicemachine/adapter-next": "^0.3.34",
         "@types/node": "^20.11.7",
         "@types/react": "^18.0.28",
         "@typescript-eslint/eslint-plugin": "^6.19.1",
@@ -57,6 +62,7 @@
         "husky": "^9.0.6",
         "lint-staged": "^15.2.0",
         "prettier": "^3.2.4",
+        "slice-machine-ui": "^1.23.1",
         "typescript": "^5.0.2"
     }
 }
