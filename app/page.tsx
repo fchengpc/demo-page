@@ -20,3 +20,8 @@ export async function generateMetadata(): Promise<Metadata> {
 		description: page.data.meta_description,
 	};
 }
+
+export function generateStaticParams() {
+	const pages = ['draft', 'quill', 'slate-react', 'result'];
+	return pages.map((page) => ({ name: page }));
+}
