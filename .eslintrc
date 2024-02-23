@@ -1,18 +1,22 @@
 {
 	"root": true,
-	"extends": ["airbnb-base", "airbnb-typescript/base", "plugin:prettier/recommended"],
+	"extends": ["plugin:prettier/recommended", "plugin:@next/next/recommended", "plugin:import/recommended", "eslint:recommended", "next"],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
-		"project": "./packages/**/tsconfig.json"
+		"project": "./tsconfig.json",
 	},
 	"settings": {
-		"import/resolver": "node"
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"],
+			},
+		},
 	},
 	"env": {
 		"node": true,
 		"browser": true,
 		"es6": true,
-		"jest": true
+		"jest": true,
 	},
 	"plugins": ["unicorn", "@typescript-eslint"],
 	"rules": {
@@ -30,8 +34,8 @@
 				"json": "always",
 				"svg": "always",
 				"woff": "always",
-				"woff2": "always"
-			}
+				"woff2": "always",
+			},
 		],
 		"import/prefer-default-export": "off",
 		"@typescript-eslint/indent": "off",
@@ -44,6 +48,6 @@
 		"unicorn/no-abusive-eslint-disable": "error",
 		"unicorn/no-array-instanceof": "error",
 		"unicorn/prefer-includes": "error",
-		"unicorn/filename-case": "error"
-	}
+		"unicorn/filename-case": "error",
+	},
 }
